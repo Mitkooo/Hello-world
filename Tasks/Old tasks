@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int daysOfAbsence = int.Parse(Console.ReadLine());
+            double foodLeftInkilos = double.Parse(Console.ReadLine());
+            double deer1 = double.Parse(Console.ReadLine());
+            double deer2 = double.Parse(Console.ReadLine());
+            double deer3 = double.Parse(Console.ReadLine());
+            deer1 = daysOfAbsence * deer1;
+            deer2 = daysOfAbsence * deer2;
+            deer3 = daysOfAbsence * deer3;
+
+
+            double foodLeft = foodLeftInkilos - (deer1 + deer2 + deer3);
+
+            if (foodLeft >= 0)
+            {
+                Console.WriteLine($"{Math.Floor(foodLeft)} kilos of food left.");
+            }
+            else
+            {
+                Console.WriteLine($"{Math.Ceiling(Math.Abs(foodLeft))} more kilos of food are needed.");
+            }
+        }
+    }
+}
