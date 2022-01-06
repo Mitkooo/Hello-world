@@ -1,0 +1,58 @@
+using System;
+
+namespace PinCodeV2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int firstBorder = int.Parse(Console.ReadLine());
+            int secondBorder = int.Parse(Console.ReadLine());
+            int thirdBorder = int.Parse(Console.ReadLine());
+            bool isPrime = true;
+
+            
+            
+            for (int i = 2; i <= firstBorder; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    continue;
+                }
+
+                for (int k = 2; k <= secondBorder; k++)
+                {
+                    if (!IsPrime(k))
+                    {
+                        continue;
+                    }
+                    for (int p = 2; p <= thirdBorder; p++)
+                    {
+                        if (p % 2 != 0)
+                        {
+                            continue;
+                        }
+
+                        Console.WriteLine($"{i} {k} {p}");
+
+                    }
+                }
+            }
+        }
+
+        public static bool IsPrime(int number)
+        {
+            if (number <= 1) return false;
+            if (number == 2) return true;
+            if (number % 2 == 0) return false;
+
+            var boundary = (int)Math.Floor(Math.Sqrt(number));
+
+            for (int i = 3; i <= boundary; i += 2)
+                if (number % i == 0)
+                    return false;
+
+            return true;
+        }
+    }
+}
