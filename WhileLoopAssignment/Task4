@@ -1,0 +1,24 @@
+Write a program in C# to start printing all the numbers between 1 and 10 but stop printing at 5. 
+
+using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a = 0;
+            
+
+            while (a < 10)
+            {
+                a++;
+                if (a <= 5)
+                {
+                    Console.WriteLine(a);
+                }
+            }
+        }
+    }
+}
