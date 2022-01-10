@@ -1,0 +1,29 @@
+Write a program in C# to take from the console two numbers and then print out all the numbers between them.
+
+using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+
+            while (a > b || a < b)
+            {
+                if (a < b)
+                {
+                    a++;
+                    Console.WriteLine(a);
+                }
+                else if (a > b)
+                {
+                    a--;
+                    Console.WriteLine(a);
+                }
+            }
+        }
+    }
+}
