@@ -1,0 +1,26 @@
+Write a C# program that asks the user to input choice in y/n and displays the output according to value input by user. 
+
+using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            char NORY = char.Parse(Console.ReadLine());
+
+            switch (NORY)
+            {
+                case 'Y':
+                    Console.WriteLine($"You entered:{NORY}");
+                    break;
+                case 'N':
+                    Console.WriteLine($"You entered:{NORY}");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}
