@@ -1,0 +1,23 @@
+Write a program in C# to display the pattern like right angle triangle with a number.
+
+using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int rows = int.Parse(Console.ReadLine());
+
+            for (int i = 10; i <= rows; i++)
+            {
+                for (int j = 10; j <= i; j++)
+                {
+                    Console.Write("{0}" ,j);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
