@@ -1,0 +1,41 @@
+ Write a C# program that keeps a number from the user and generates an integer between 1 and 7 and displays the name of the weekday.
+ Print "Weekend" if the day is part of the weekend or "Workday" if otherwise.
+ 
+ using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string numOfDay = Console.ReadLine();
+
+            switch (numOfDay)
+            {
+                case "1":
+                    Console.WriteLine("Monday is a workday");
+                    break;
+                case "2":
+                    Console.WriteLine("Tuesday is a workday");
+                    break;
+                case "3":
+                    Console.WriteLine("Wednesday is a workday");
+                    break;
+                case "4":
+                    Console.WriteLine("Thursday is a workday");
+                    break;
+                case "5":
+                    Console.WriteLine("Friday is a workday");
+                    break;
+                case "6":
+                    Console.WriteLine("Saturday - weekend");
+                    break;
+                case "7":
+                    Console.WriteLine("Sunday - weekend");
+                    break;
+                    
+            }
+        }
+    }
+}
