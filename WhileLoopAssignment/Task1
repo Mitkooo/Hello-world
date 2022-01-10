@@ -1,0 +1,20 @@
+Write a program in C# to display the numbers from 10 to 1 in a reverse order. 
+
+using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a = 10;
+
+            while (a > 0)
+            {
+                Console.WriteLine(a);
+                a--;
+            }
+        }
+    }
+}
