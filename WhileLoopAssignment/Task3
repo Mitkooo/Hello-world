@@ -1,0 +1,30 @@
+Write a program in C# to print all the numbers between 1 and 10 with the exception of 3 and 5
+
+using System;
+namespace OperatorsAppl
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a = 0;
+            
+
+            while (a < 10)
+            {
+                a++;
+                if (a == 3)
+                {
+                    continue;
+                }
+                if (a == 5)
+                {
+                    continue;
+                }
+                Console.WriteLine(a);
+                
+            }
+        }
+    }
+}
