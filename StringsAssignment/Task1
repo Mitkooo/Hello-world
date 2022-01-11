@@ -1,0 +1,24 @@
+Write a C# program to compare the size of two strings. 
+
+using System;
+
+namespace TasksFromOOP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1 = "I started studying.";
+            string str2 = "I didnt start studying.";
+
+            if (string.Compare(str1,str2) == 0)
+            {
+                Console.WriteLine($"{str1} and {str2} are equal.");
+            }
+            else
+            {
+                Console.WriteLine($"{str1} and {str2} are NOT equal.");
+            }      
+        }
+    }
+}
