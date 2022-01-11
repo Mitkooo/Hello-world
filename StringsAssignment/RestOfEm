@@ -1,0 +1,52 @@
+2.Write a C# program to concatenate a given string to the end of another string. 
+
+4.Write a C# program to find out if a char is in a string. 
+
+5.Write a C# program to remove all the white spaces in a given string and print it out. 
+
+6.Write a C# program to convert an integer into string. Find two solutions to this problem. 
+
+using System;
+
+namespace TasksFromOOP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine(MyStringMethod("Pesho", "ima", "kinti"));
+            Console.WriteLine(FourthTask("Trigger"));
+            Console.WriteLine(BoliMeGlavataVeche("Ne mo ga po ve che"));
+            Console.WriteLine(ConvertingFromStringToInt());
+        }
+        public static string MyStringMethod(string first, string second, string third)
+        {
+            
+            return first + second + third;
+        }
+        public static string FourthTask(string one)
+        {
+            
+            if (one.Contains("t"))
+            {
+                Console.WriteLine("The word contains the character 't'.");
+            }
+            else
+            {
+                Console.WriteLine("The word does NOT contain the letter 't'.");
+            }
+            return one;
+        }
+        public static string BoliMeGlavataVeche(string str1 = "Ne moga po veche")
+        {
+            str1 = str1.Replace(" ",string.Empty);
+            return str1;
+        }
+        public static string ConvertingFromStringToInt(int a = 299)
+        {
+            string v = a.ToString();
+            return v;
+        }
+    }
+}
