@@ -1,0 +1,23 @@
+Write a C# program to create a new String object with the contents of a character array. Use the internet to find a solution.
+
+using System;
+
+namespace TasksFromOOP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string sentence = "He hasn't seen the light of day in ages.";
+
+            if (sentence.Contains("seen"))
+            {
+                Console.WriteLine("The word 'seen' was found!");
+            }
+            else
+            {
+                Console.WriteLine("Error404:Word not found!");
+            }
+        }
+    }
+}
