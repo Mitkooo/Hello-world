@@ -1,0 +1,86 @@
+You curious bastard!
+Just having fun!
+
+using System;
+
+namespace TasksFromOOP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            Console.WriteLine(MyStringMethod("Pesho", "ima", "kinti"));
+            Console.WriteLine(FourthTask("Trigger"));
+            Console.WriteLine(BoliMeGlavataVeche("Ne mo ga po ve che"));
+            Console.WriteLine(ConvertingFromStringToInt());*/
+            /*Something();
+            int answer = Multiply(5,8);
+            Console.WriteLine("The answer is : " + answer);
+            if (answer % 2 == 0)
+            {
+                Console.WriteLine("The result is even.");
+            }
+            else
+            {
+                Console.WriteLine("The result is NOT even.");
+            }*/
+            Console.Write("Enter a sentence: ");
+            string sentence = Console.ReadLine();
+            int wordCount = JustAnExample(sentence);
+            Console.WriteLine(JustAnExample(sentence));
+            Console.WriteLine("There are " + wordCount +  "words in that sentence.");
+
+
+        }
+        public static string MyStringMethod(string first, string second, string third)
+        {
+            
+            return first + second + third;
+        }
+        public static string FourthTask(string one)
+        {
+            
+            if (one.Contains("t"))
+            {
+                Console.WriteLine("The word contains the character 't'.");
+            }
+            else
+            {
+                Console.WriteLine("The word does NOT contain the letter 't'.");
+            }
+            return one;
+        }
+        public static string BoliMeGlavataVeche(string str1 = "Ne moga po veche")
+        {
+            str1 = str1.Replace(" ",string.Empty);
+            return str1;
+        }
+        public static string ConvertingFromStringToInt(int a = 299)
+        {
+            string v = a.ToString();
+            return v;
+        }
+
+        static void Something()
+        {
+            Random numGen = new Random();
+            string name = "X - " + numGen.Next(10,9999);
+            int age = numGen.Next(10, 500);
+            Console.WriteLine("Hi, I'm " + name + ".");
+            Console.WriteLine("I'm " + age + ".");
+            Console.WriteLine("Oh, and I'm an alien.");
+        }
+        static int Multiply(int num1,int num2)
+        {
+            int result = num1 * num2;
+            return result;
+        }
+
+        static int JustAnExample(string sentence)
+        {
+           int wordCount = sentence.Split(' ').Length;
+            return wordCount;
+        }
+    }
+}
