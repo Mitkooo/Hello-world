@@ -1,0 +1,23 @@
+Write a C# program to test if an array contains a specific value.  
+
+using System;
+using System.Collections.Generic;
+namespace Task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> nums = new List<int>() { 45, 34, 77, 56 };
+
+            if (nums.Contains(34))
+            {
+                Console.WriteLine("Be tam e");
+            }
+            else
+            {
+                Console.WriteLine("MMMMMBA");
+            }
+        }
+    }
+}
