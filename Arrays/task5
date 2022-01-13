@@ -1,0 +1,40 @@
+Write a C# program to reverse an array of integer values.
+
+using System;
+
+namespace 3-та_световна_война
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { 5, 4, 8, 4, 6, 1 };
+            PrintingProcess(6, arr);
+            ReversingProcess(arr, 0, 5);
+            Console.WriteLine("\nAnd Here it is reversed...");
+            PrintingProcess(6, arr);
+        }
+
+        static void ReversingProcess(int[] arr, int start, int end)
+        {
+            int temp;
+            while (start < end)
+            {
+                temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+        }
+
+        static void PrintingProcess(int size, int[] arr)
+        {
+            
+            for (int i = 0; i < size; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+    }
+}
