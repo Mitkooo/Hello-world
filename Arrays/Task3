@@ -1,0 +1,21 @@
+Write a C# program to sum values of an array.
+
+using System;
+
+namespace Task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] glavobolietoMi = {45, 34, 77, 56};
+            int sum = 0;
+            int i;
+            for (i = 0; i < 4; i++)
+            {
+                sum += glavobolietoMi[i];
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
