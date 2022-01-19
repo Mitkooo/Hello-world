@@ -1,0 +1,254 @@
+using System;
+using System.Collections.Generic;
+
+namespace AnimalsCounting
+{
+    class dogs
+    {
+        public int numberOfDogs;
+        public double priceDogs;
+        public double height;
+        public int Id;
+        public int Age;
+        public string Name;
+        public string Breed;
+
+        public dogs()
+        {
+
+        }
+
+        public dogs(int id, int age, string name, string breed)
+        {
+            this.Id = id;
+            this.Age = age;
+            this.Name = name;
+            this.Breed = breed;
+        }
+    }
+    class cats
+    {
+        public int numberOfCats;
+        public double priceCats;
+        public int Id;
+        public int Age;
+        public string Name;
+        public string colour;
+
+        public cats()
+        {
+
+        }
+
+        public cats(int id, int age, string name, string colour)
+        {
+            this.Id = id;
+            this.Age = age;
+            this.Name = name;
+            this.colour = colour;
+        }
+    }
+    class bunnys
+    {
+        public int numberOfBunnys;
+        public double priceBunnys;
+        public int Id;
+        public int Age;
+        public string Name;
+        public string colour;
+
+        public bunnys()
+        {
+
+        }
+
+        public bunnys(int id, int age, string name, string colour)
+        {
+            this.Id = id;
+            this.Age = age;
+            this.Name = name;
+            this.colour = colour;
+        }
+    }
+    class SumOfAll
+    {
+        public static void Main(string[] args)
+        {
+            while (true)
+            {
+               AllTogether();
+               foodManaging();
+                Console.WriteLine("Would you like to use the app again?");
+                string repeat = Console.ReadLine();
+                if (repeat == "no thanks")
+                {
+                    break;
+                }
+            }
+            Console.WriteLine("Would you like to acces the animal database?");
+            string question = Console.ReadLine();
+            if (question == "yes")
+            {
+                DataStorage();
+            }
+            else
+            {
+                Console.WriteLine("Thank you for using our app!");
+                Console.WriteLine("We wish you a good and productive day!");
+            }
+        }
+        public static double AllTogether()
+        {
+            
+            dogs numberDogs = new dogs();
+            cats numberCats = new cats();
+            bunnys numberBunnys = new bunnys();
+
+            dogs PriceDogs = new dogs();
+            cats PriceCats = new cats();
+            bunnys PriceBunnys = new bunnys();
+
+            //priceDogs = 60.80;
+            //PriceCats = 46.40;
+            //PriceBunnys = 34.70;
+
+            PriceDogs.priceDogs = 60.80;
+            PriceCats.priceCats = 45.60;
+            PriceBunnys.priceBunnys = 34.40;
+
+            int i;
+            double priceToPay;
+
+            int[] allInOne = new int[3];
+
+            int sum = 0;
+            int counter = 0;
+
+            while (counter < 3)
+            {
+                if (counter > 0)
+                {
+                    Console.WriteLine("Enter a number:");
+                    allInOne[counter] = int.Parse(Console.ReadLine());
+                    counter++;
+                }
+                else
+                {
+                    Console.WriteLine("Enter another number:");
+                    allInOne[counter] = int.Parse(Console.ReadLine());
+                    counter++;
+                }
+            }
+
+            numberDogs.numberOfDogs = allInOne[0];
+            numberCats.numberOfCats = allInOne[1];
+            numberBunnys.numberOfBunnys = allInOne[2];
+
+            Console.WriteLine("Dogs:{0}", allInOne[0]);
+            Console.WriteLine("Cats:{0}", allInOne[1]);
+            Console.WriteLine("Bunnys:{0}", allInOne[2]);
+
+            for (i = 0; i < 3; i++)
+            {
+                sum += allInOne[i];
+            }
+
+            Console.WriteLine("Animals coming this month:{0}", sum);
+
+            priceToPay = numberDogs.numberOfDogs * PriceDogs.priceDogs + numberCats.numberOfCats * PriceCats.priceCats + numberBunnys.numberOfBunnys * PriceBunnys.priceBunnys;
+
+            Console.WriteLine("Total cost for the month:{0}", priceToPay);
+
+            if (priceToPay > 1000)
+            {
+                Console.WriteLine("You are now broke!");
+            }
+
+            return priceToPay;
+        }
+
+        public static void foodManaging()
+        {
+            while (true)
+            {
+                Console.WriteLine("Would you like to purchase food?");
+                string yesOrNo = Console.ReadLine();
+                if (yesOrNo == "yes")
+                {
+                    Console.WriteLine("Enter the dog food cost:");
+                    double dogFood = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the amount of packages of dog food you wish to purchase:");
+                    int numDogFood = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the cat food cost:");
+                    double catFood = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the amount of packages of cat food you wish to purchase:");
+                    int numCatFood = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the bunny food cost:");
+                    double bunnyFood = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the amount of packages of bunny food you wish to purchase:");
+                    int numBunnyFood = int.Parse(Console.ReadLine());
+                    double sumFood = 0;
+
+                    sumFood = numDogFood * dogFood + numCatFood * catFood + numBunnyFood * bunnyFood;
+
+                    Console.WriteLine("Food cost total:{0}", sumFood);
+                    break;
+                }
+                else if (yesOrNo == "no")
+                {
+                    Console.WriteLine("No food will be purchased!");
+                    break;
+                }
+            }
+        }
+
+        /*public dogs(int id, int age, string name, string breed)
+        {
+            this.Id = id;
+            this.Age = age;
+            this.Name = name;
+            this.Breed = breed;
+        }*/
+
+        public static void DataStorage()
+        {
+            dogs dog1 = new dogs(1, 2, "Sharo", "German shepherd");
+            dogs dog2 = new dogs(2, 1, "Lucky", "German shepherd");
+            dogs dog3 = new dogs(3, 2, "dogo", "German shepherd");
+            dogs dog4 = new dogs(4, 1, "Sean", "Jackrussel");
+            dogs dog5 = new dogs(5, 3, "Ricky", "Jackrussel");
+            cats cat1 = new cats(01, 4, "Zuckho", "black/white");
+            cats cat2 = new cats(02, 3, "Toph", "Ginger");
+            cats cat3 = new cats(03, 1, "Zuckho", "brown/white");
+            bunnys bunny1 = new bunnys(001, 1, "Curtis", "gray");
+            bunnys bunny2 = new bunnys(002, 1, "Syny", "white");
+
+            List<object> GermanShepherds = new List<object>();
+
+            GermanShepherds.Add(dog1);
+            GermanShepherds.Add(dog2);
+            GermanShepherds.Add(dog3);
+
+            List<object> Jackrussel = new List<object>();
+
+            Jackrussel.Add(dog4);
+            Jackrussel.Add(dog5);
+
+            List<object> cats = new List<object>();
+
+            cats.Add(cat1);
+            cats.Add(cat2);
+            cats.Add(cat3);
+
+            List<object> bunnys = new List<object>();
+
+            bunnys.Add(bunny1);
+            bunnys.Add(bunny2);
+
+            /*Console.WriteLine(GermanShepherds);
+            Console.WriteLine(Jackrussel);
+            Console.WriteLine(cats);
+            Console.WriteLine(bunnys);*/
+        }
+    }// { get; set; }
+}
