@@ -1,0 +1,111 @@
+1. Create class named Student with following public properties: 
+
+ 
+
+- name 
+
+- fNumber 
+
+ 
+
+and methods: 
+
+ 
+
+- takeExam() 
+
+ 
+
+This method should implement logic for printing out the following message: "Taking exam". 
+
+ 
+
+ 
+
+Note: name and fNumber are assigned in class constructor. 
+
+ 
+
+2. Create new class University and add boolean static method to check if the student year has started. 
+
+
+3. Create two classes: 
+
+ 
+
+- Mathematician 
+
+ 
+
+Add property certification to this class. 
+
+ 
+
+- Athlete 
+
+ 
+
+ 
+
+4. These two classes should inherit Student class. 
+
+ 
+
+ 
+
+5. Update Student class by adding new property attendance (заверка). Consider the best type for this property. 
+
+
+using System;
+
+namespace StaticVarApplication
+{
+    class Student
+    {
+        public string name;
+        public string fName;
+        public bool zaverka;
+
+        public static void takeExam(string[] args)
+        {
+            Console.WriteLine("Taking exam");
+        }
+
+        class University
+        {
+            public static void Main(string[] args)
+            {
+                YesOrNo();
+            }
+            public static bool YesOrNo()
+            {
+                bool hasStarted = true;
+                Console.WriteLine("Has the year started?");
+                string answer = Console.ReadLine();
+                switch (answer)
+                {
+                    case "Yes":
+                        Console.WriteLine("The year has started");
+                        hasStarted = true;
+                        break;
+                    case "No":
+                        Console.WriteLine("The year has not started");
+                        hasStarted = false;
+                        break;
+
+                }
+                return hasStarted;
+            }
+        }
+
+        public class Mathematician : Student
+        {
+
+        }
+
+        public class Athlete : Student 
+        {
+
+        }
+    }
+}
