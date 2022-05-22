@@ -4,32 +4,42 @@ Steps:
 -Press the button made for that product.
 
 Test 2:To check of the vending machine would give correct change when giving more than needed amount of money.
+Steps:
 -Insert more than the needed amount for the product.
 -Press the button made for that product.
 
 Test 3:to check if contactless payment method is available
+Steps:
 -Insert a credit card into the vending machine.
 -Purchase any product.
 
 Test 4:To check if user has inserted cash.
+Steps:
 -Insert any amount of cash.
 
 Test 5:To check if the refund button is working properly and the money is returned.
+Steps:
 -Insert any amount of cash.-Press the refund button.
 
 Test 6:To check if the end-user has inserted the right amount of cash for a product.
+Steps:
 -Insert the exact amount of cash needed for a product.
 -Purchase the product.
 
 Test 7:To check if shaking the machine won't dispense any product
+Steps:
+-Try and push it back and fourth to see if any product falls down.
 
 Test 8:To check if the vending machine would respond if we press all buttons.
+Steps:
 -Press as much buttons as possible.
 
 Test 9:To check if the vending machine would dispense the product if we insert less than designated amount of money for it.
+Steps:
 -Insert any amount of money.
 -Purchase a product that has a price higher than the amount of money you entered.
 
 Test 10:To check if contactless payment method is rejected.
+Steps:
 -Enter a blocked credit card.
 -Try to purchase any product.
